@@ -22,6 +22,12 @@ public class PathFollower : MonoBehaviour
     public float arriveDistance = 0.3f;
     public float waitAtWaypoint = 0f;
 
+    [Header("Terrain (direct mode only)")]
+    [Tooltip("Keep the object on top of the terrain surface.")]
+    public bool followTerrainHeight = true;
+    [Tooltip("Distance from terrain to the object's pivot. Use at least half the object's height (0.5 for a default cube).")]
+    public float heightAboveTerrain = 0.5f;
+
     NavMeshAgent agent;
     int index;
     bool running;
@@ -84,12 +90,26 @@ public class PathFollower : MonoBehaviour
             }
 
             Vector3 dir = flat.normalized;
-            transform.position += dir * speed * Time.deltaTime;
+            Vector3 newPos = transform.position + dir * speed * Time.deltaTime;
+
+            // Snap height to the terrain surface
+            if (followTerrainHeight)
+                newPos.y = GetTerrainY(newPos) + heightAboveTerrain;
+
+            transform.position = newPos;
             transform.rotation = Quaternion.Slerp(
                 transform.rotation,
                 Quaternion.LookRotation(dir),
                 turnSpeed * Time.deltaTime);
         }
+    }
+
+    float GetTerrainY(Vector3 worldPos)
+    {
+        Terrain terrain = Terrain.activeTerrain;
+        if (terrain == null) return worldPos.y; // no terrain, keep current height
+
+        return terrain.SampleHeight(worldPos) + terrain.transform.position.y;
     }
 
     void OnReached()
