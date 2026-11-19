@@ -51,7 +51,7 @@ public class GetArduinoData : MonoBehaviour
                 string[] values = data.Split(',');
                 //split data at ,
 
-                if (values.Length >= 3)
+                if (values.Length >= 8)
                 //make sure three values
                 {
                     pie1Val = int.Parse(values[0]);
