@@ -420,7 +420,7 @@ MonoBehaviour:
   defaultWait: 2
   skipThreshold: 100
   rearmThreshold: 50
-  skipClip: {fileID: 8300000, guid: 779a96709a89c46bca22dbc7a9dea6ec, type: 3}
+  skipClip: {fileID: 8300000, guid: a8f1607e936ac446db5f7c4095630767, type: 3}
   clipVolume: 1
   playOnlyWhileWaiting: 0
 --- !u!1 &171344048
@@ -3055,6 +3055,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2128386445}
   - component: {fileID: 2128386446}
+  - component: {fileID: 2128386447}
+  - component: {fileID: 2128386448}
+  - component: {fileID: 2128386451}
+  - component: {fileID: 2128386450}
+  - component: {fileID: 2128386449}
   m_Layer: 0
   m_Name: MainAudio
   m_TagString: Untagged
@@ -3094,7 +3099,97 @@ MonoBehaviour:
   audioSource: {fileID: 1641214773}
   threshold: 100
   rearmThreshold: 50
+  clip: {fileID: 8300000, guid: 713977bf1e6af42dcaaacd5df384f3b6, type: 3}
+  clipVolume: 1
+--- !u!114 &2128386447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128386444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f2af0a33ddf74dbca85317271dc2822, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sound3
+  arduino: {fileID: 941562339}
+  audioSource: {fileID: 1641214773}
+  threshold: 100
+  rearmThreshold: 50
+  clip: {fileID: 8300000, guid: 13b38819c42754960a4e36e38f0bf685, type: 3}
+  clipVolume: 1
+--- !u!114 &2128386448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128386444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bceafba2d4681406097c48822a7e7fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sound4
+  arduino: {fileID: 941562339}
+  audioSource: {fileID: 1641214773}
+  threshold: 100
+  rearmThreshold: 50
+  clip: {fileID: 8300000, guid: 913d1c69ddbdb4df0bc560142fa4a562, type: 3}
+  clipVolume: 1
+--- !u!114 &2128386449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128386444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2fadf922be0245379ec56d62e8b7d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sound7
+  arduino: {fileID: 941562339}
+  audioSource: {fileID: 1641214773}
+  threshold: 100
+  rearmThreshold: 50
   clip: {fileID: 8300000, guid: 8a556a58c741d41e68f4ec262cf015c1, type: 3}
+  clipVolume: 1
+--- !u!114 &2128386450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128386444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d76d69ffe9e7447298dfc323431d41a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sound6
+  arduino: {fileID: 941562339}
+  audioSource: {fileID: 1641214773}
+  threshold: 100
+  rearmThreshold: 50
+  clip: {fileID: 8300000, guid: 6da837098e37d45a3a644c3658d8efb0, type: 3}
+  clipVolume: 1
+--- !u!114 &2128386451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128386444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1385bdc780eb446cb9148d0fc1091fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Sound5
+  arduino: {fileID: 941562339}
+  audioSource: {fileID: 1641214773}
+  threshold: 100
+  rearmThreshold: 50
+  clip: {fileID: 8300000, guid: cd39c1e54b0d34772a22ab8e3f4ceae8, type: 3}
   clipVolume: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
