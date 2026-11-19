@@ -14,6 +14,12 @@ public class GetArduinoData : MonoBehaviour
     public int pie1Val;
     public int pie2Val;
     public int pie3Val;
+    public int pie4Val;
+    public int pie5Val;
+    public int pie6Val;
+    public int pie7Val;
+    public int pie8Val;
+
 
 
 
@@ -51,6 +57,11 @@ public class GetArduinoData : MonoBehaviour
                     pie1Val = int.Parse(values[0]);
                     pie2Val = int.Parse(values[1]);
                     pie3Val = int.Parse(values[2]);
+                    pie4Val = int.Parse(values[3]);
+                    pie5Val = int.Parse(values[4]);
+                    pie6Val = int.Parse(values[5]);
+                    pie7Val = int.Parse(values[6]);
+                    pie8Val = int.Parse(values[7]);
                     //turn data back into integer
                 }
             }
